@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		0245BF1D247DFE3C00646910 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245BF1C247DFE3C00646910 /* AppDelegate.swift */; };
 		0245BF1F247DFE3C00646910 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245BF1E247DFE3C00646910 /* SceneDelegate.swift */; };
-		0245BF21247DFE3C00646910 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245BF20247DFE3C00646910 /* ViewController.swift */; };
+		0245BF21247DFE3C00646910 /* SpashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245BF20247DFE3C00646910 /* SpashViewController.swift */; };
 		0245BF24247DFE3C00646910 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0245BF22247DFE3C00646910 /* Main.storyboard */; };
 		0245BF26247DFE3D00646910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0245BF25247DFE3D00646910 /* Assets.xcassets */; };
 		0245BF29247DFE3D00646910 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0245BF27247DFE3D00646910 /* LaunchScreen.storyboard */; };
 		0245BF34247DFE3D00646910 /* SaveTheFoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245BF33247DFE3D00646910 /* SaveTheFoodTests.swift */; };
 		0245BF3F247DFE3D00646910 /* SaveTheFoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245BF3E247DFE3D00646910 /* SaveTheFoodUITests.swift */; };
+		02985358248F13F600C79B09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02985357248F13F600C79B09 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 		0245BF19247DFE3C00646910 /* SaveTheFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveTheFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0245BF1C247DFE3C00646910 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0245BF1E247DFE3C00646910 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0245BF20247DFE3C00646910 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0245BF20247DFE3C00646910 /* SpashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpashViewController.swift; sourceTree = "<group>"; };
 		0245BF23247DFE3C00646910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0245BF25247DFE3D00646910 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0245BF28247DFE3D00646910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		0245BF3A247DFE3D00646910 /* SaveTheFoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaveTheFoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0245BF3E247DFE3D00646910 /* SaveTheFoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTheFoodUITests.swift; sourceTree = "<group>"; };
 		0245BF40247DFE3D00646910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02985357248F13F600C79B09 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,14 @@
 		0245BF1B247DFE3C00646910 /* SaveTheFood */ = {
 			isa = PBXGroup;
 			children = (
+				02985359248F140F00C79B09 /* Views */,
 				0245BF1C247DFE3C00646910 /* AppDelegate.swift */,
 				0245BF1E247DFE3C00646910 /* SceneDelegate.swift */,
-				0245BF20247DFE3C00646910 /* ViewController.swift */,
-				0245BF22247DFE3C00646910 /* Main.storyboard */,
+				0298535A248F141900C79B09 /* Controllers */,
 				0245BF25247DFE3D00646910 /* Assets.xcassets */,
 				0245BF27247DFE3D00646910 /* LaunchScreen.storyboard */,
 				0245BF2A247DFE3D00646910 /* Info.plist */,
+				02985357248F13F600C79B09 /* LoginViewController.swift */,
 			);
 			path = SaveTheFood;
 			sourceTree = "<group>";
@@ -126,6 +129,22 @@
 				0245BF40247DFE3D00646910 /* Info.plist */,
 			);
 			path = SaveTheFoodUITests;
+			sourceTree = "<group>";
+		};
+		02985359248F140F00C79B09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0245BF22247DFE3C00646910 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0298535A248F141900C79B09 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0245BF20247DFE3C00646910 /* SpashViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0245BF21247DFE3C00646910 /* ViewController.swift in Sources */,
+				02985358248F13F600C79B09 /* LoginViewController.swift in Sources */,
+				0245BF21247DFE3C00646910 /* SpashViewController.swift in Sources */,
 				0245BF1D247DFE3C00646910 /* AppDelegate.swift in Sources */,
 				0245BF1F247DFE3C00646910 /* SceneDelegate.swift in Sources */,
 			);
