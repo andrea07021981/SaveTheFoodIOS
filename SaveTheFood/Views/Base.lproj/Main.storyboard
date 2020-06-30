@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEn-Iz-Azp">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Food" translatesAutoresizingMaskIntoConstraints="NO" id="3x5-Rz-ZCT">
                                         <rect key="frame" x="132" y="334" width="150" height="150"/>
@@ -30,27 +30,34 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JEn-Iz-Azp" secondAttribute="trailing" id="1LL-0x-DAZ"/>
                             <constraint firstItem="JEn-Iz-Azp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3jN-WM-Qm1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JEn-Iz-Azp" secondAttribute="bottom" id="VOo-6i-KG4"/>
-                            <constraint firstItem="JEn-Iz-Azp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xkm-8H-HeZ"/>
+                            <constraint firstAttribute="bottom" secondItem="JEn-Iz-Azp" secondAttribute="bottom" id="VOo-6i-KG4"/>
+                            <constraint firstItem="JEn-Iz-Azp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="88" id="xkm-8H-HeZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="QNO-WS-Zt1"/>
                     <connections>
-                        <segue destination="b8G-IV-NXo" kind="show" id="hGL-DY-6iq"/>
+                        <segue destination="b8G-IV-NXo" kind="show" identifier="goToLogin" id="Vmy-4h-LAI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1528.985507246377" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="FN1-P9-bZT">
             <objects>
-                <viewController id="b8G-IV-NXo" sceneMemberID="viewController">
+                <viewController id="b8G-IV-NXo" customClass="LoginViewController" customModule="SaveTheFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GTW-aq-zFQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="NW7-fL-UFp" userLabel="Background">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.68463720034246578" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="62r-WU-YrM"/>
                     </view>
@@ -58,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAB-P2-BFi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2305.7971014492755" y="137.94642857142856"/>
+            <point key="canvasLocation" x="2656.521739130435" y="137.94642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NPa-Wo-DkO">
@@ -80,6 +87,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Background" width="166.5" height="250"/>
         <image name="Food" width="24" height="24"/>
         <namedColor name="Primary">
             <color red="0.15686274509803921" green="0.20784313725490197" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
