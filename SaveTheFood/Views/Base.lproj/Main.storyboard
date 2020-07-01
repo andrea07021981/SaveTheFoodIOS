@@ -56,48 +56,71 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="NW7-fL-UFp" userLabel="Background">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" white="1" alpha="0.68463720034246578" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save The Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paf-hr-1D2">
-                                <rect key="frame" x="0.0" y="188" width="414" height="68"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="52"/>
-                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="SeX-g0-9UV">
-                                <rect key="frame" x="0.0" y="562" width="414" height="300"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6P-xm-s2D">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="Sign In">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2r-rN-Xla">
-                                        <rect key="frame" x="0.0" y="170" width="414" height="130"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="Sign Up">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="MGf-Lp-Tq3"/>
+                                    <constraint firstAttribute="height" constant="808" id="LrV-Af-gJ6"/>
                                 </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="CIl-fm-yeq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save The Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paf-hr-1D2">
+                                        <rect key="frame" x="8" y="8" width="398" height="96.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="52"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qRO-Db-GPT">
+                                        <rect key="frame" x="8" y="204.5" width="398" height="146"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CMx-D0-iHe">
+                                                <rect key="frame" x="20" y="8" width="358" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="kzS-oQ-hJQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SsC-xN-3bk">
+                                                <rect key="frame" x="20" y="78" width="358" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                            </textField>
+                                        </subviews>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="20" bottom="8" trailing="20"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SeX-g0-9UV">
+                                        <rect key="frame" x="8" y="450.5" width="398" height="315.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6P-xm-s2D">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="157.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                <state key="normal" title="Sign In">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2r-rN-Xla">
+                                                <rect key="frame" x="0.0" y="157.5" width="398" height="158"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Sign Up">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="62r-WU-YrM" firstAttribute="trailing" secondItem="paf-hr-1D2" secondAttribute="trailing" id="2gh-4Y-hrc"/>
-                            <constraint firstItem="62r-WU-YrM" firstAttribute="trailing" secondItem="SeX-g0-9UV" secondAttribute="trailing" id="3ZI-yD-XWn"/>
-                            <constraint firstItem="paf-hr-1D2" firstAttribute="top" secondItem="62r-WU-YrM" secondAttribute="top" constant="100" id="4dd-I3-Uyy"/>
+                            <constraint firstItem="CIl-fm-yeq" firstAttribute="top" secondItem="62r-WU-YrM" secondAttribute="top" id="48J-IJ-M30"/>
                             <constraint firstAttribute="bottom" secondItem="NW7-fL-UFp" secondAttribute="bottom" id="6wT-xj-gEF"/>
-                            <constraint firstItem="paf-hr-1D2" firstAttribute="leading" secondItem="62r-WU-YrM" secondAttribute="leading" id="Ai6-vv-3U6"/>
-                            <constraint firstItem="62r-WU-YrM" firstAttribute="bottom" secondItem="SeX-g0-9UV" secondAttribute="bottom" id="IET-P0-3Eq"/>
+                            <constraint firstItem="CIl-fm-yeq" firstAttribute="leading" secondItem="62r-WU-YrM" secondAttribute="leading" id="9NT-uo-o2O"/>
                             <constraint firstItem="NW7-fL-UFp" firstAttribute="top" secondItem="62r-WU-YrM" secondAttribute="top" id="KaT-kA-gwc"/>
-                            <constraint firstItem="NW7-fL-UFp" firstAttribute="trailing" secondItem="paf-hr-1D2" secondAttribute="trailing" id="TZ8-Bh-Gi6"/>
-                            <constraint firstItem="SeX-g0-9UV" firstAttribute="leading" secondItem="62r-WU-YrM" secondAttribute="leading" id="lRp-kR-p5V"/>
-                            <constraint firstItem="NW7-fL-UFp" firstAttribute="leading" secondItem="paf-hr-1D2" secondAttribute="leading" id="oae-mJ-njD"/>
+                            <constraint firstItem="CIl-fm-yeq" firstAttribute="bottom" secondItem="62r-WU-YrM" secondAttribute="bottom" id="Qro-SW-RxS"/>
+                            <constraint firstItem="62r-WU-YrM" firstAttribute="trailing" secondItem="CIl-fm-yeq" secondAttribute="trailing" id="mxy-cS-QmL"/>
+                            <constraint firstItem="NW7-fL-UFp" firstAttribute="leading" secondItem="CIl-fm-yeq" secondAttribute="leading" id="shj-ZN-Khj"/>
+                            <constraint firstItem="NW7-fL-UFp" firstAttribute="trailing" secondItem="CIl-fm-yeq" secondAttribute="trailing" id="yzn-F9-3l3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="62r-WU-YrM"/>
                     </view>
