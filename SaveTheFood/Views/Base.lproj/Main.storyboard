@@ -37,7 +37,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="QNO-WS-Zt1"/>
                     <connections>
-                        <segue destination="b8G-IV-NXo" kind="show" identifier="goToLogin" id="Vmy-4h-LAI"/>
+                        <outlet property="screenImage" destination="3x5-Rz-ZCT" id="WFb-K7-kqj"/>
+                        <segue destination="b8G-IV-NXo" kind="show" identifier="SplashToLogin" id="Vmy-4h-LAI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -52,16 +53,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="NW7-fL-UFp" userLabel="Background">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="NW7-fL-UFp" userLabel="Background">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" white="1" alpha="0.68463720034246578" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save The Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paf-hr-1D2">
+                                <rect key="frame" x="0.0" y="188" width="414" height="68"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="52"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="SeX-g0-9UV">
+                                <rect key="frame" x="0.0" y="562" width="414" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6P-xm-s2D">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2r-rN-Xla">
+                                        <rect key="frame" x="0.0" y="170" width="414" height="130"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="MGf-Lp-Tq3"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="62r-WU-YrM" firstAttribute="trailing" secondItem="paf-hr-1D2" secondAttribute="trailing" id="2gh-4Y-hrc"/>
+                            <constraint firstItem="62r-WU-YrM" firstAttribute="trailing" secondItem="SeX-g0-9UV" secondAttribute="trailing" id="3ZI-yD-XWn"/>
+                            <constraint firstItem="paf-hr-1D2" firstAttribute="top" secondItem="62r-WU-YrM" secondAttribute="top" constant="100" id="4dd-I3-Uyy"/>
+                            <constraint firstAttribute="bottom" secondItem="NW7-fL-UFp" secondAttribute="bottom" id="6wT-xj-gEF"/>
+                            <constraint firstItem="paf-hr-1D2" firstAttribute="leading" secondItem="62r-WU-YrM" secondAttribute="leading" id="Ai6-vv-3U6"/>
+                            <constraint firstItem="62r-WU-YrM" firstAttribute="bottom" secondItem="SeX-g0-9UV" secondAttribute="bottom" id="IET-P0-3Eq"/>
+                            <constraint firstItem="NW7-fL-UFp" firstAttribute="top" secondItem="62r-WU-YrM" secondAttribute="top" id="KaT-kA-gwc"/>
+                            <constraint firstItem="NW7-fL-UFp" firstAttribute="trailing" secondItem="paf-hr-1D2" secondAttribute="trailing" id="TZ8-Bh-Gi6"/>
+                            <constraint firstItem="SeX-g0-9UV" firstAttribute="leading" secondItem="62r-WU-YrM" secondAttribute="leading" id="lRp-kR-p5V"/>
+                            <constraint firstItem="NW7-fL-UFp" firstAttribute="leading" secondItem="paf-hr-1D2" secondAttribute="leading" id="oae-mJ-njD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="62r-WU-YrM"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dp6-fa-dxs"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="dp6-fa-dxs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAB-P2-BFi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,7 +127,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background" width="166.5" height="250"/>
+        <image name="Background" width="164.5" height="247"/>
         <image name="Food" width="24" height="24"/>
         <namedColor name="Primary">
             <color red="0.15686274509803921" green="0.20784313725490197" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
