@@ -26,7 +26,7 @@ class SpashViewController: UIViewController, CAAnimationDelegate {
     }
     
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        self.performSegue(withIdentifier: "SplashToLogin", sender: nil)
+        self.performSegue(withIdentifier: K.splashSegue, sender: self)
     }
 
 }

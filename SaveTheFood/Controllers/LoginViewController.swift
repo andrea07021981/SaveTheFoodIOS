@@ -44,4 +44,7 @@ class LoginViewController: UIViewController {
             alert.dismiss(animated: true)
         }
     }
+    @IBAction func signUpPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: K.loginSegue, sender: self)
+    }
 }

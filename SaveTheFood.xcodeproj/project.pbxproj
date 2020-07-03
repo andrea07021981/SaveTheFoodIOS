@@ -17,6 +17,8 @@
 		0245BF3F247DFE3D00646910 /* SaveTheFoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245BF3E247DFE3D00646910 /* SaveTheFoodUITests.swift */; };
 		0289DAB624AE918500F3BC05 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289DAB524AE918500F3BC05 /* RoundButton.swift */; };
 		029F681924AAC45F008FC555 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F681824AAC45F008FC555 /* LoginViewController.swift */; };
+		02F2D23A24AFB9E800EE5043 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2D23924AFB9E800EE5043 /* K.swift */; };
+		02F2D23C24AFC76C00EE5043 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2D23B24AFC76C00EE5043 /* SignUpViewController.swift */; };
 		1629F5C32ADC0C50CAB4902F /* Pods_SaveTheFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66F5A53E56E005958FFCB2B /* Pods_SaveTheFood.framework */; };
 		BC1E475D47D2F7B539442E53 /* Pods_SaveTheFood_SaveTheFoodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B04F6345D97B48E5FC94D43A /* Pods_SaveTheFood_SaveTheFoodUITests.framework */; };
 		CB29891A8A05C82B88734E6F /* Pods_SaveTheFoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F45BC0EBE85731F4962EED2 /* Pods_SaveTheFoodTests.framework */; };
@@ -56,6 +58,8 @@
 		0245BF40247DFE3D00646910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0289DAB524AE918500F3BC05 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		029F681824AAC45F008FC555 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		02F2D23924AFB9E800EE5043 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		02F2D23B24AFC76C00EE5043 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1165A9935F3AC4B38FD76CFD /* Pods-SaveTheFoodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaveTheFoodTests.debug.xcconfig"; path = "Target Support Files/Pods-SaveTheFoodTests/Pods-SaveTheFoodTests.debug.xcconfig"; sourceTree = "<group>"; };
 		24BFA876AE050FE6F4FD7F63 /* Pods-SaveTheFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaveTheFood.debug.xcconfig"; path = "Target Support Files/Pods-SaveTheFood/Pods-SaveTheFood.debug.xcconfig"; sourceTree = "<group>"; };
 		4F45BC0EBE85731F4962EED2 /* Pods_SaveTheFoodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SaveTheFoodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +132,7 @@
 				0245BF25247DFE3D00646910 /* Assets.xcassets */,
 				0245BF27247DFE3D00646910 /* LaunchScreen.storyboard */,
 				0245BF2A247DFE3D00646910 /* Info.plist */,
+				02F2D23924AFB9E800EE5043 /* K.swift */,
 			);
 			path = SaveTheFood;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			children = (
 				0245BF20247DFE3C00646910 /* SpashViewController.swift */,
 				029F681824AAC45F008FC555 /* LoginViewController.swift */,
+				02F2D23B24AFC76C00EE5043 /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -195,7 +201,6 @@
 				1165A9935F3AC4B38FD76CFD /* Pods-SaveTheFoodTests.debug.xcconfig */,
 				9278CD9EDCBF428DAA773B00 /* Pods-SaveTheFoodTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -403,10 +408,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0245BF21247DFE3C00646910 /* SpashViewController.swift in Sources */,
+				02F2D23C24AFC76C00EE5043 /* SignUpViewController.swift in Sources */,
 				0289DAB624AE918500F3BC05 /* RoundButton.swift in Sources */,
 				0245BF1D247DFE3C00646910 /* AppDelegate.swift in Sources */,
 				029F681924AAC45F008FC555 /* LoginViewController.swift in Sources */,
 				0245BF1F247DFE3C00646910 /* SceneDelegate.swift in Sources */,
+				02F2D23A24AFB9E800EE5043 /* K.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
