@@ -10,6 +10,10 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        //TODO doesn't work
+        //navigationItem.backBarButtonItem?.title = "Exit"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }

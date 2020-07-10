@@ -54,4 +54,13 @@ class LoginViewController: UIViewController {
     @IBAction func signUpPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: K.loginSegue, sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is HomeViewController{
+            //Change the title of back button
+            let backItem = UIBarButtonItem()
+            backItem.title = "Exit"
+            navigationItem.backBarButtonItem = backItem
+        }
+    }
 }

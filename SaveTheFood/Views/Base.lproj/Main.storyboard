@@ -174,7 +174,7 @@
             </objects>
             <point key="canvasLocation" x="2656.521739130435" y="137.94642857142856"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="Okx-h0-Lhu">
             <objects>
                 <viewController id="Oci-90-FNK" customClass="HomeViewController" customModule="SaveTheFood" customModuleProvider="target" sceneMemberID="viewController">
@@ -184,11 +184,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Py-W7-LFT"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xr6-B8-2AI"/>
+                    <navigationItem key="navigationItem" title="Home" id="xr6-B8-2AI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E2Y-vn-zJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3988" y="234"/>
+            <point key="canvasLocation" x="4903" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NPa-Wo-DkO">
@@ -287,15 +287,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="9Hs-mf-n7p"/>
                     <connections>
-                        <outlet property="emailTextField" destination="oLI-0j-A3i" id="FfN-bh-dTo"/>
-                        <outlet property="passwordTextField" destination="reU-j2-YP9" id="VKB-AJ-ufD"/>
+                        <outlet property="emailTextField" destination="oLI-0j-A3i" id="fPj-lF-akl"/>
+                        <outlet property="passwordTextField" destination="reU-j2-YP9" id="t3o-w3-xKS"/>
+                        <segue destination="Oci-90-FNK" kind="show" identifier="SignupToHome" id="Myu-48-X8Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FH0-eH-pI6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3706" y="-520"/>
+            <point key="canvasLocation" x="3645" y="-595"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Myu-48-X8Y"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Background" width="164.5" height="247"/>
         <image name="Food" width="24" height="24"/>

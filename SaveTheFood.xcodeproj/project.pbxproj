@@ -18,6 +18,7 @@
 		0289DAB624AE918500F3BC05 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289DAB524AE918500F3BC05 /* RoundButton.swift */; };
 		029F681924AAC45F008FC555 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F681824AAC45F008FC555 /* LoginViewController.swift */; };
 		02DF966F24B9139F00B2AC7A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DF966E24B9139F00B2AC7A /* HomeViewController.swift */; };
+		02DF967524B91D4600B2AC7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02DF967424B91D4600B2AC7A /* GoogleService-Info.plist */; };
 		02F2D23A24AFB9E800EE5043 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2D23924AFB9E800EE5043 /* K.swift */; };
 		02F2D23C24AFC76C00EE5043 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2D23B24AFC76C00EE5043 /* SignUpViewController.swift */; };
 		1629F5C32ADC0C50CAB4902F /* Pods_SaveTheFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66F5A53E56E005958FFCB2B /* Pods_SaveTheFood.framework */; };
@@ -60,6 +61,7 @@
 		0289DAB524AE918500F3BC05 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		029F681824AAC45F008FC555 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		02DF966E24B9139F00B2AC7A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		02DF967424B91D4600B2AC7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		02F2D23924AFB9E800EE5043 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		02F2D23B24AFC76C00EE5043 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1165A9935F3AC4B38FD76CFD /* Pods-SaveTheFoodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaveTheFoodTests.debug.xcconfig"; path = "Target Support Files/Pods-SaveTheFoodTests/Pods-SaveTheFoodTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		0245BF1B247DFE3C00646910 /* SaveTheFood */ = {
 			isa = PBXGroup;
 			children = (
+				02DF967424B91D4600B2AC7A /* GoogleService-Info.plist */,
 				0289DAB424AE916E00F3BC05 /* UI */,
 				02985359248F140F00C79B09 /* Views */,
 				0245BF1C247DFE3C00646910 /* AppDelegate.swift */,
@@ -317,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0245BF29247DFE3D00646910 /* LaunchScreen.storyboard in Resources */,
+				02DF967524B91D4600B2AC7A /* GoogleService-Info.plist in Resources */,
 				0245BF26247DFE3D00646910 /* Assets.xcassets in Resources */,
 				0245BF24247DFE3C00646910 /* Main.storyboard in Resources */,
 			);
