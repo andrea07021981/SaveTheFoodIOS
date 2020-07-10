@@ -1,0 +1,6 @@
+# Xcode
+#
+# gitignore 
+
+## Firebase
+SaveTheFood/GoogleService-Info.plist

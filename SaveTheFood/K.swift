@@ -9,4 +9,5 @@
 struct K {
     static let splashSegue = "SplashToLogin"
     static let loginSegue = "LoginToSignUp"
+    static let loginHomeSegue = "LoginToHome"
 }

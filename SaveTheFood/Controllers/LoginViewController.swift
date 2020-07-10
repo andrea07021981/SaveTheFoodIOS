@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class LoginViewController: UIViewController {
 
     @IBOutlet var emailTextField: UITextField!
@@ -28,14 +28,21 @@ class LoginViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     @IBAction func signInPressed(_ sender: UIButton) {
-        if (emailTextField.text == "" ||
-            pswTextField.text == "") {
-                showAlert();
+        if let email = emailTextField.text, let password = pswTextField.text {
+            Auth.auth().signIn(withEmail: email, password: password) { authresult, error in
+                if let e = error {
+                    self.showAlert(msg: e.localizedDescription)
+                } else {
+                    self.performSegue(withIdentifier: K.loginHomeSegue, sender: self)
+                }
+            }
+        } else {
+            showAlert(msg: "Email and password required")
         }
     }
     
-    func showAlert() {
-        let alert = UIAlertController(title: "Attention", message: "Email and password required", preferredStyle: .alert)
+    func showAlert(msg: String, t: String = "Attention") {
+        let alert = UIAlertController(title: t, message: msg, preferredStyle: .alert)
         alert.view.backgroundColor = UIColor.white
         alert.view.alpha = 0.6
         alert.view.layer.cornerRadius = 15

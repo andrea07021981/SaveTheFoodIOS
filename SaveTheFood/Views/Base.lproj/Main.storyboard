@@ -98,7 +98,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="SLE-5T-AxK"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <state key="normal" title="Sign In">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -123,7 +123,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="5IU-Rk-f1P"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <state key="normal" title="Sign Up">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -167,11 +167,28 @@
                         <outlet property="emailTextField" destination="CMx-D0-iHe" id="BCM-Ce-QDt"/>
                         <outlet property="pswTextField" destination="SsC-xN-3bk" id="M8I-qD-MAk"/>
                         <segue destination="6yF-6A-SX5" kind="show" identifier="LoginToSignUp" id="Lj3-f9-eMQ"/>
+                        <segue destination="Oci-90-FNK" kind="show" identifier="LoginToHome" id="iBx-Sj-r0t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAB-P2-BFi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2656.521739130435" y="137.94642857142856"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="Okx-h0-Lhu">
+            <objects>
+                <viewController id="Oci-90-FNK" customClass="HomeViewController" customModule="SaveTheFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ScI-yp-iM9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Py-W7-LFT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xr6-B8-2AI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E2Y-vn-zJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3988" y="234"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NPa-Wo-DkO">
