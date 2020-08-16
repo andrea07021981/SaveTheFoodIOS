@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BAY-wB-fcl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BAY-wB-fcl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -19,12 +19,19 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEn-Iz-Azp">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Food" translatesAutoresizingMaskIntoConstraints="NO" id="3x5-Rz-ZCT">
-                                        <rect key="frame" x="132" y="334" width="150" height="150"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Food" translatesAutoresizingMaskIntoConstraints="NO" id="3x5-Rz-ZCT">
+                                        <rect key="frame" x="132" y="329" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="4In-39-hTo"/>
+                                            <constraint firstAttribute="width" constant="150" id="6Ja-gv-4ev"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="tintColor" name="PrimaryColor"/>
+                                <constraints>
+                                    <constraint firstItem="3x5-Rz-ZCT" firstAttribute="centerY" secondItem="JEn-Iz-Azp" secondAttribute="centerY" id="OM3-5F-iFF"/>
+                                    <constraint firstItem="3x5-Rz-ZCT" firstAttribute="centerX" secondItem="JEn-Iz-Azp" secondAttribute="centerX" id="chv-Me-JKc"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" name="Primary"/>
@@ -73,7 +80,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qRO-Db-GPT">
                                         <rect key="frame" x="8" y="364" width="398" height="146"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CMx-D0-iHe">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a@a.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CMx-D0-iHe">
                                                 <rect key="frame" x="20" y="8" width="358" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="kzS-oQ-hJQ"/>
@@ -81,7 +88,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next" textContentType="email"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SsC-xN-3bk">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="aaaaaa" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SsC-xN-3bk">
                                                 <rect key="frame" x="20" y="78" width="358" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="go" textContentType="password"/>
@@ -181,14 +188,31 @@
                     <view key="view" contentMode="scaleToFill" id="ScI-yp-iM9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cMM-ZI-pb4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cMM-ZI-pb4" firstAttribute="top" secondItem="6Py-W7-LFT" secondAttribute="top" id="82q-iN-kz1"/>
+                            <constraint firstItem="cMM-ZI-pb4" firstAttribute="leading" secondItem="6Py-W7-LFT" secondAttribute="leading" id="SIk-33-6iJ"/>
+                            <constraint firstItem="6Py-W7-LFT" firstAttribute="trailing" secondItem="cMM-ZI-pb4" secondAttribute="trailing" id="cZB-Ma-MNV"/>
+                            <constraint firstItem="6Py-W7-LFT" firstAttribute="bottom" secondItem="cMM-ZI-pb4" secondAttribute="bottom" id="vbm-ld-LvX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Py-W7-LFT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="xr6-B8-2AI"/>
+                    <navigationItem key="navigationItem" title="Home" id="xr6-B8-2AI">
+                        <barButtonItem key="backBarButtonItem" title="a" id="SP7-mq-Pep"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="foodsTableView" destination="cMM-ZI-pb4" id="Y2P-xt-aI7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E2Y-vn-zJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4903" y="138"/>
+            <point key="canvasLocation" x="3886" y="200"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NPa-Wo-DkO">
@@ -298,7 +322,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Myu-48-X8Y"/>
+        <segue reference="iBx-Sj-r0t"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background" width="164.5" height="247"/>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodCellIdentifier" rowHeight="51" id="KGk-i7-Jjw" customClass="FoodCell" customModule="SaveTheFood" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="amO-k6-kd7">
+                        <rect key="frame" x="10" y="10" width="300" height="49"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Food" translatesAutoresizingMaskIntoConstraints="NO" id="Ggf-dX-977">
+                                <rect key="frame" x="0.0" y="4.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="3nI-sT-7hp"/>
+                                    <constraint firstAttribute="height" constant="40" id="B2g-AK-kF5"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4hR-0w-ctm">
+                                <rect key="frame" x="60" y="0.0" width="240" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNi-0L-Kvv">
+                                        <rect key="frame" x="10" y="10" width="220" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="Primary"/>
+                                <constraints>
+                                    <constraint firstItem="eNi-0L-Kvv" firstAttribute="leading" secondItem="4hR-0w-ctm" secondAttribute="leading" constant="10" id="2al-9L-kPv"/>
+                                    <constraint firstItem="eNi-0L-Kvv" firstAttribute="top" secondItem="4hR-0w-ctm" secondAttribute="top" constant="10" id="NnG-jY-vtG"/>
+                                    <constraint firstAttribute="trailing" secondItem="eNi-0L-Kvv" secondAttribute="trailing" constant="10" id="fAm-Xx-WX5"/>
+                                    <constraint firstAttribute="bottom" secondItem="eNi-0L-Kvv" secondAttribute="bottom" constant="10" id="tEn-pv-t50"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" name="PrimaryColor"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="amO-k6-kd7" secondAttribute="trailing" constant="10" id="2lo-Nx-jbz"/>
+                    <constraint firstItem="amO-k6-kd7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="F3t-Bi-mcT"/>
+                    <constraint firstItem="amO-k6-kd7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="c24-ou-XBo"/>
+                    <constraint firstAttribute="bottom" secondItem="amO-k6-kd7" secondAttribute="bottom" constant="10" id="gBP-8v-YCX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="containerView" destination="4hR-0w-ctm" id="QfD-34-qDe"/>
+                <outlet property="foodImageView" destination="Ggf-dX-977" id="8aR-NQ-4pY"/>
+                <outlet property="foodNameLabel" destination="eNi-0L-Kvv" id="b2f-tX-SSe"/>
+            </connections>
+            <point key="canvasLocation" x="103" y="123"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Food" width="24" height="24"/>
+        <namedColor name="Primary">
+            <color red="0.15686274509803921" green="0.20784313725490197" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryColor">
+            <color red="0.090999998152256012" green="0.210999995470047" blue="0.22699999809265137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
