@@ -28,6 +28,10 @@ class HomeViewController : UIViewController {
         
         foodManager.loadLocalfood()
     }
+    
+    @IBAction func addFoodButtonPressed(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: K.homeToSearchFoodSegue, sender: self)
+    }
 }
 
 //MARK: Food delegate

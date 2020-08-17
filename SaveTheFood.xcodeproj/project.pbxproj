@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020D21C524EAC434008DCF99 /* SearchFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020D21C424EAC434008DCF99 /* SearchFoodViewController.swift */; };
+		020D21C724EAD610008DCF99 /* FoodNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020D21C624EAD610008DCF99 /* FoodNetworkManager.swift */; };
 		0245BF1D247DFE3C00646910 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245BF1C247DFE3C00646910 /* AppDelegate.swift */; };
 		0245BF1F247DFE3C00646910 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245BF1E247DFE3C00646910 /* SceneDelegate.swift */; };
 		0245BF21247DFE3C00646910 /* SpashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245BF20247DFE3C00646910 /* SpashViewController.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020D21C424EAC434008DCF99 /* SearchFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFoodViewController.swift; sourceTree = "<group>"; };
+		020D21C624EAD610008DCF99 /* FoodNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNetworkManager.swift; sourceTree = "<group>"; };
 		0245BF19247DFE3C00646910 /* SaveTheFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveTheFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0245BF1C247DFE3C00646910 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0245BF1E247DFE3C00646910 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 				0288513224E9780400420426 /* FoodManager.swift */,
 				0288513424E979AC00420426 /* FoodNetworkData.swift */,
 				0288513624E97ACD00420426 /* FoodModel.swift */,
+				020D21C624EAD610008DCF99 /* FoodNetworkManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				029F681824AAC45F008FC555 /* LoginViewController.swift */,
 				02F2D23B24AFC76C00EE5043 /* SignUpViewController.swift */,
 				02DF966E24B9139F00B2AC7A /* HomeViewController.swift */,
+				020D21C424EAC434008DCF99 /* SearchFoodViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -495,6 +501,8 @@
 				0245BF1D247DFE3C00646910 /* AppDelegate.swift in Sources */,
 				029F681924AAC45F008FC555 /* LoginViewController.swift in Sources */,
 				0288513524E979AC00420426 /* FoodNetworkData.swift in Sources */,
+				020D21C724EAD610008DCF99 /* FoodNetworkManager.swift in Sources */,
+				020D21C524EAC434008DCF99 /* SearchFoodViewController.swift in Sources */,
 				0288513B24E9800400420426 /* DataModel.xcdatamodeld in Sources */,
 				0245BF1F247DFE3C00646910 /* SceneDelegate.swift in Sources */,
 				02F2D23A24AFB9E800EE5043 /* K.swift in Sources */,

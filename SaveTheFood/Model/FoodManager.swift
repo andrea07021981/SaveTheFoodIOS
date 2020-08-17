@@ -30,10 +30,10 @@ class FoodManager {
         
         do {
             // TODO check delete not working
-            let food = Food(context: self.context)
-            food.id = 1
-            food.name = "Pasta"
-            food.url = "https://spoonacular.com/productImages/481652-312x231.jpg"
+//            let food = Food(context: self.context)
+//            food.id = 1
+//            food.name = "Pasta"
+//            food.url = "https://spoonacular.com/productImages/481652-312x231.jpg"
             saveFood()
             let foods = try context.fetch(request).map({ food -> FoodModel in
                 FoodModel(foodId: food.id, foodName: food.name, foodUrl: food.url)

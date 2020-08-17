@@ -20,7 +20,7 @@ class SpashViewController: UIViewController, CAAnimationDelegate {
         pulseAnimation.toValue = 1
         pulseAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         pulseAnimation.autoreverses = true
-        pulseAnimation.repeatCount = 3
+        pulseAnimation.repeatCount = 2
         pulseAnimation.delegate = self
         screenImage.layer.add(pulseAnimation, forKey: nil)
     }

@@ -23,7 +23,7 @@ class SignUpViewController: UIViewController {
                 if let e = error {
                     self.showAlert(msg: e.localizedDescription)
                 } else {
-                    self.performSegue(withIdentifier: K.signupToHome, sender: self)
+                    self.performSegue(withIdentifier: K.signupToHomeSegue, sender: self)
                 }
             }
         } else {

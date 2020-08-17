@@ -191,10 +191,11 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cMM-ZI-pb4">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="Primary"/>
+                                <color key="tintColor" name="Primary"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="Primary"/>
                         <constraints>
                             <constraint firstItem="cMM-ZI-pb4" firstAttribute="top" secondItem="6Py-W7-LFT" secondAttribute="top" id="82q-iN-kz1"/>
                             <constraint firstItem="cMM-ZI-pb4" firstAttribute="leading" secondItem="6Py-W7-LFT" secondAttribute="leading" id="SIk-33-6iJ"/>
@@ -204,15 +205,71 @@
                         <viewLayoutGuide key="safeArea" id="6Py-W7-LFT"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="xr6-B8-2AI">
-                        <barButtonItem key="backBarButtonItem" title="a" id="SP7-mq-Pep"/>
+                        <barButtonItem key="backBarButtonItem" title="home" id="SP7-mq-Pep"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gkW-k3-vwg">
+                            <connections>
+                                <action selector="addFoodButtonPressed:" destination="Oci-90-FNK" id="KB1-Z8-BwW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="foodsTableView" destination="cMM-ZI-pb4" id="Y2P-xt-aI7"/>
+                        <segue destination="Sph-OK-oRh" kind="show" identifier="HomeToSearchFood" id="Sbb-rZ-XfU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E2Y-vn-zJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3886" y="200"/>
+        </scene>
+        <!--search-->
+        <scene sceneID="QYU-d9-gJM">
+            <objects>
+                <viewController id="Sph-OK-oRh" customClass="SearchFoodViewController" customModule="SaveTheFood" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gKo-lW-JvU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="food name" translatesAutoresizingMaskIntoConstraints="NO" id="Ayg-Zx-oDU">
+                                <rect key="frame" x="10" y="98" width="394" height="60"/>
+                                <color key="backgroundColor" name="Primary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bQY-2B-ldT"/>
+                                </constraints>
+                                <color key="tintColor" name="Primary"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-Js-hAb">
+                                <rect key="frame" x="10" y="168" width="394" height="684"/>
+                                <color key="backgroundColor" name="Primary"/>
+                                <color key="tintColor" name="Primary"/>
+                                <color key="separatorColor" name="Primary"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="Primary"/>
+                        <constraints>
+                            <constraint firstItem="Ayg-Zx-oDU" firstAttribute="top" secondItem="xWw-rH-Wdk" secondAttribute="top" constant="10" id="5Xw-o9-7GW"/>
+                            <constraint firstItem="qbz-Js-hAb" firstAttribute="top" secondItem="Ayg-Zx-oDU" secondAttribute="bottom" constant="10" id="887-2f-8JK"/>
+                            <constraint firstItem="xWw-rH-Wdk" firstAttribute="trailing" secondItem="Ayg-Zx-oDU" secondAttribute="trailing" constant="10" id="KUN-Vl-rfT"/>
+                            <constraint firstItem="xWw-rH-Wdk" firstAttribute="trailing" secondItem="qbz-Js-hAb" secondAttribute="trailing" constant="10" id="ROP-Va-bnx"/>
+                            <constraint firstItem="xWw-rH-Wdk" firstAttribute="bottom" secondItem="qbz-Js-hAb" secondAttribute="bottom" constant="10" id="bdN-0g-hlJ"/>
+                            <constraint firstItem="Ayg-Zx-oDU" firstAttribute="leading" secondItem="xWw-rH-Wdk" secondAttribute="leading" constant="10" id="edr-Np-WqB"/>
+                            <constraint firstItem="qbz-Js-hAb" firstAttribute="leading" secondItem="xWw-rH-Wdk" secondAttribute="leading" constant="10" id="slP-70-4Av"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xWw-rH-Wdk"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="search" id="MXm-uq-uAo">
+                        <barButtonItem key="backBarButtonItem" title="home" id="n67-U4-VDp"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="Ayg-Zx-oDU" id="IJg-W8-nXr"/>
+                        <outlet property="tableViewFoods" destination="qbz-Js-hAb" id="6by-Oh-c0U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G73-P4-Dyf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4995.652173913044" y="199.55357142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NPa-Wo-DkO">
