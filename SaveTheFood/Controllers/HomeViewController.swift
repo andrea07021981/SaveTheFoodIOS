@@ -15,11 +15,6 @@ class HomeViewController : UIViewController {
     var foods = [FoodModel]()
     var foodManager = FoodManager()
     override func viewWillAppear(_ animated: Bool) {
-        //TODO doesn't work
-        //navigationItem.backBarButtonItem?.title = "Exit"
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
         foodManager.delegate = self
         
         foodsTableView.dataSource = self
@@ -27,6 +22,10 @@ class HomeViewController : UIViewController {
         foodsTableView.register(UINib(nibName: K.foodCell, bundle: nil), forCellReuseIdentifier: K.foodCellIdentifier)
         
         foodManager.loadLocalfood()
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
     }
     
     @IBAction func addFoodButtonPressed(_ sender: UIBarButtonItem) {
@@ -52,6 +51,7 @@ extension HomeViewController : FoodManagerDelegate{
     
     func didUpdateFoods(_ foodManager: FoodManager, foods: [FoodModel]) {
         self.foods = foods
+        foodsTableView.reloadData()
     }
     
     func didFailWithError(error: Error) {

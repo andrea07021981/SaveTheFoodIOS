@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "HomeViewController.viewWillAppear(_:):HomeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "navigationController?.viewControllers">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "HomeViewController.tableView(_:commit:forRowAt:):HomeViewController.swift">
          <PersistentStrings>
             <PersistentString
