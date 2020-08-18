@@ -238,6 +238,9 @@
                                 <color key="tintColor" name="Primary"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Sph-OK-oRh" id="ep6-gV-MaI"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-Js-hAb">
                                 <rect key="frame" x="10" y="168" width="394" height="684"/>
@@ -245,6 +248,10 @@
                                 <color key="tintColor" name="Primary"/>
                                 <color key="separatorColor" name="Primary"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Sph-OK-oRh" id="2kt-Hv-9y3"/>
+                                    <outlet property="delegate" destination="Sph-OK-oRh" id="pos-35-KM9"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" name="Primary"/>
@@ -264,7 +271,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="Ayg-Zx-oDU" id="IJg-W8-nXr"/>
-                        <outlet property="tableViewFoods" destination="qbz-Js-hAb" id="6by-Oh-c0U"/>
+                        <outlet property="tableViewFoods" destination="qbz-Js-hAb" id="dSw-Hl-O5b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G73-P4-Dyf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -379,7 +386,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iBx-Sj-r0t"/>
+        <segue reference="Myu-48-X8Y"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background" width="164.5" height="247"/>

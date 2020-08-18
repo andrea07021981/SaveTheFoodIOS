@@ -14,11 +14,14 @@ class SearchFoodViewController : UIViewController {
     @IBOutlet var tableViewFoods: UITableView!
     
     var foodNetworkData = [FoodModel]()
-    let foodManager = FoodNetworkManager()
+    let foodNetworkManager = FoodNetworkManager()
+    let foodManager = FoodManager()
+    
     var foods = [FoodModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        foodNetworkManager.delegate = self
         foodManager.delegate = self
         searchBar.delegate = self
         tableViewFoods.dataSource = self
@@ -41,12 +44,27 @@ extension SearchFoodViewController : FoodNetworkManagerDelegate {
     }
 }
 
+//MARK: Food local delegate
+extension SearchFoodViewController : FoodManagerDelegate {
+    func didSavedFood() {
+         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func didUpdateFoods(_ foodManager: FoodManager, foods: [FoodModel]) {
+        
+    }
+    
+    func didDeleteFood(_ food: FoodModel) {
+       
+    }
+}
+
 // MARK: - Search bar methids
 extension SearchFoodViewController : UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let filter = searchBar.text {
-            self.foodManager.fetchFood(param: filter)
+            self.foodNetworkManager.fetchFood(param: filter)
         }
     }
 }
@@ -85,7 +103,21 @@ extension SearchFoodViewController : UITableViewDataSource {
 
 //MARK: Tableview delegate
 extension SearchFoodViewController : UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: "New Food", message: "Do you want to save the food?", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Save", style: .default) { (action) in
+            if let indexPath = tableView.indexPathForSelectedRow {
+                self.foodManager.saveFood(foodModel: self.foods[indexPath.row])
+            }
+        }
+        let actionCancell = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            
+        }
+        
+        //Prepare alert
+        alert.addAction(action)
+        alert.addAction(actionCancell)
+        self.present(alert, animated: true, completion: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

@@ -36,6 +36,10 @@ class HomeViewController : UIViewController {
 
 //MARK: Food delegate
 extension HomeViewController : FoodManagerDelegate{
+    func didSavedFood() {
+        //Nothing
+    }
+    
     func didDeleteFood(_ food: FoodModel) {
         if let index = foods.firstIndex(where: { foodItem -> Bool in
             food.foodId == foodItem.foodId

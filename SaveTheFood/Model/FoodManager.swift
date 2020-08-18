@@ -13,6 +13,7 @@ import CoreData
 protocol FoodManagerDelegate {
     func didUpdateFoods(_ foodManager: FoodManager, foods: [FoodModel])
     func didDeleteFood(_ food: FoodModel)
+    func didSavedFood()
     func didFailWithError(error: Error)
 }
 
@@ -34,7 +35,7 @@ class FoodManager {
 //            food.id = 1
 //            food.name = "Pasta"
 //            food.url = "https://spoonacular.com/productImages/481652-312x231.jpg"
-            saveFood()
+            try saveFood()
             let foods = try context.fetch(request).map({ food -> FoodModel in
                 FoodModel(foodId: food.id, foodName: food.name, foodUrl: food.url)
             })
@@ -44,11 +45,25 @@ class FoodManager {
         }
     }
     
-    func saveFood() {
+    func saveFood() throws {
         do {
             try context.save()
         } catch {
             print("Error saving category \(error)")
+            throw error
+        }
+    }
+    
+    func saveFood(foodModel: FoodModel) {
+        let food = Food(context: self.context)
+        do {
+            food.id = foodModel.foodId
+            food.name = foodModel.foodName
+            food.url = foodModel.foodUrl
+            try saveFood()
+            delegate?.didSavedFood()
+        } catch {
+            delegate?.didFailWithError(error: error)
         }
     }
     
