@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeViewController : UIViewController {
     
@@ -22,15 +23,37 @@ class HomeViewController : UIViewController {
         foodsTableView.register(UINib(nibName: K.foodCell, bundle: nil), forCellReuseIdentifier: K.foodCellIdentifier)
         
         foodManager.loadLocalfood()
+        self.navigationItem.setHidesBackButton(true, animated: true);
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-    
+
     @IBAction func addFoodButtonPressed(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: K.homeToSearchFoodSegue, sender: self)
     }
+    
+    @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "LogOut", message: "Would you like to log out?", preferredStyle: .alert)
+        alert.view.backgroundColor = UIColor.white
+        alert.view.alpha = 0.6
+        alert.view.layer.cornerRadius = 15
+        alert.addAction(UIAlertAction(title: "YES", style: .default, handler: { (action) in
+            DispatchQueue.main.async() {
+                do {
+                    try Auth.auth().signOut()
+                    self.navigationController?.popViewController(animated: true)
+                } catch {
+                    print(error)
+                }
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "NO", style: .cancel))
+        self.present(alert, animated: true)
+    }
+    
 }
 
 //MARK: Food delegate

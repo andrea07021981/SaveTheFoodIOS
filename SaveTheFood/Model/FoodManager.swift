@@ -69,11 +69,11 @@ class FoodManager {
     
     func deleteFood(_ food: FoodModel) {
         do {
-            let dbfood = Food(context: context)
-            dbfood.id = food.foodId
-            dbfood.name = food.foodName
-            dbfood.url = food.foodUrl
-            context.delete(dbfood)
+            let request: NSFetchRequest<Food> = Food.fetchRequest()
+            request.predicate = NSPredicate(format: "id == %d", food.foodId)
+            let dbFood = try context.fetch(request)
+            
+            context.delete(dbFood[0])
             try context.save()
             delegate?.didDeleteFood(food)
         } catch {

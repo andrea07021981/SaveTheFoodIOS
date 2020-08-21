@@ -206,6 +206,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="xr6-B8-2AI">
                         <barButtonItem key="backBarButtonItem" title="home" id="SP7-mq-Pep"/>
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="7aE-D6-4OP">
+                            <connections>
+                                <action selector="logOutButtonPressed:" destination="Oci-90-FNK" id="m2R-7X-2eO"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gkW-k3-vwg">
                             <connections>
                                 <action selector="addFoodButtonPressed:" destination="Oci-90-FNK" id="KB1-Z8-BwW"/>
