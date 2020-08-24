@@ -207,11 +207,13 @@
                     <navigationItem key="navigationItem" title="Home" id="xr6-B8-2AI">
                         <barButtonItem key="backBarButtonItem" title="home" id="SP7-mq-Pep"/>
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="7aE-D6-4OP">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="logOutButtonPressed:" destination="Oci-90-FNK" id="m2R-7X-2eO"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gkW-k3-vwg">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addFoodButtonPressed:" destination="Oci-90-FNK" id="KB1-Z8-BwW"/>
                             </connections>
@@ -220,11 +222,27 @@
                     <connections>
                         <outlet property="foodsTableView" destination="cMM-ZI-pb4" id="Y2P-xt-aI7"/>
                         <segue destination="Sph-OK-oRh" kind="show" identifier="HomeToSearchFood" id="Sbb-rZ-XfU"/>
+                        <segue destination="qJ7-vh-7c8" kind="showDetail" identifier="HomeToDetailFood" id="TE4-kJ-jA3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E2Y-vn-zJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3886" y="200"/>
+        </scene>
+        <!--Food Detail View Controller-->
+        <scene sceneID="Nrt-pI-yuK">
+            <objects>
+                <viewController id="qJ7-vh-7c8" customClass="FoodDetailViewController" customModule="SaveTheFood" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ogc-hf-KZF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="mGf-kA-Jhp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zNa-tc-cv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4380" y="968"/>
         </scene>
         <!--search-->
         <scene sceneID="QYU-d9-gJM">
@@ -288,9 +306,16 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BAY-wB-fcl" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WcM-OC-Hc1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="WcM-OC-Hc1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="Primary"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -391,7 +416,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Myu-48-X8Y"/>
+        <segue reference="iBx-Sj-r0t"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background" width="164.5" height="247"/>

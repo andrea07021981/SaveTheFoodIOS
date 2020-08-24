@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import ChameleonFramework
 
 class SearchFoodViewController : UIViewController {
     
@@ -28,6 +29,17 @@ class SearchFoodViewController : UIViewController {
         tableViewFoods.dataSource = self
         tableViewFoods.delegate = self
         tableViewFoods.register(UINib(nibName: K.foodCell, bundle: nil), forCellReuseIdentifier: K.foodCellIdentifier)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let navBar = navigationController?.navigationBar else {
+            fatalError("Nav controller doesn't exist")
+        }
+        if let customColor = UIColor(named: "Primary") {
+            navBar.backgroundColor = customColor
+            navBar.tintColor = ContrastColorOf(customColor, returnFlat: true)
+            navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : ContrastColorOf(customColor, returnFlat: true)]
+        }
     }
 }
 
