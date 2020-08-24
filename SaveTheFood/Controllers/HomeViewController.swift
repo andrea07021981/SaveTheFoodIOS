@@ -8,12 +8,14 @@
 
 import UIKit
 import Firebase
+import RealmSwift
+import SwipeCellKit
 
 class HomeViewController : UIViewController {
     
     @IBOutlet var foodsTableView: UITableView!
     
-    var foods = [FoodModel]()
+    var foods: Results<FoodData>?
     var foodManager = FoodManager()
     override func viewWillAppear(_ animated: Bool) {
         foodManager.delegate = self
@@ -62,17 +64,11 @@ extension HomeViewController : FoodManagerDelegate{
         //Nothing
     }
     
-    func didDeleteFood(_ food: FoodModel) {
-        if let index = foods.firstIndex(where: { foodItem -> Bool in
-            food.foodId == foodItem.foodId
-        }) {
-            self.foods.remove(at: index)
-        }
-        
+    func didDeleteFood(_ food: FoodData) {
         self.foodsTableView.reloadData()
     }
     
-    func didUpdateFoods(_ foodManager: FoodManager, foods: [FoodModel]) {
+    func didUpdateFoods(_ foodManager: FoodManager, foods: Results<FoodData>?) {
         self.foods = foods
         foodsTableView.reloadData()
     }
@@ -86,30 +82,23 @@ extension HomeViewController : FoodManagerDelegate{
 extension HomeViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        foods.count
+        foods?.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let food = foods[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: K.foodCellIdentifier, for: indexPath) as! FoodCell
-        
-        cell.foodNameLabel.text = food.foodName
-        if let url = URL(string: food.foodUrl!) {
-            load(url: url, cell: cell)
+        if let food = foods?[indexPath.row] {
+            cell.foodNameLabel.text = food.foodName
+            if let url = URL(string: food.foodUrl!) {
+                load(url: url, cell: cell)
+            }
+        } else {
+            cell.textLabel?.text = "No Food Added"
         }
-        
         return cell
     }
-        
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            foodManager.deleteFood(foods[indexPath.row])
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
-    }
-    
+   
     func load(url: URL, cell: FoodCell) {
         DispatchQueue.global().async {
             if let data = try? Data(contentsOf: url) {
@@ -120,6 +109,31 @@ extension HomeViewController : UITableViewDataSource {
                 }
             }
         }
+    }
+}
+
+extension HomeViewController : SwipeTableViewCellDelegate {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        //Check orientation of swipe
+        guard orientation == .right else { return nil }
+
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+            guard let food = self.foods?[indexPath.row] else {
+                fatalError("No food found")
+            }
+            self.foodManager.deleteFood(food)
+        }
+
+        // customize the action appearance
+        deleteAction.image = UIImage(named: "delete")
+
+        return [deleteAction]
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
+        var options = SwipeOptions()
+        options.expansionStyle = .destructive
+        return options
     }
 }
 
