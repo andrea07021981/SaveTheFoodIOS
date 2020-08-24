@@ -12,6 +12,7 @@ struct K {
     static let loginHomeSegue = "LoginToHome"
     static let signupToHomeSegue = "SignupToHome"
     static let homeToSearchFoodSegue = "HomeToSearchFood"
+    static let homeToDetailFoodSegue = "HomeToDetailFood"
     
     static let foodCell = "FoodCell"
     static let foodCellIdentifier = "FoodCellIdentifier"
