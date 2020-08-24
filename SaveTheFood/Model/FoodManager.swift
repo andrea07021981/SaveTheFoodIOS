@@ -8,46 +8,37 @@
 
 import Foundation
 import UIKit
-import CoreData
+import RealmSwift
 
 protocol FoodManagerDelegate {
-    func didUpdateFoods(_ foodManager: FoodManager, foods: [FoodModel])
-    func didDeleteFood(_ food: FoodModel)
+    func didUpdateFoods(_ foodManager: FoodManager, foods: Results<FoodData>?)
+    func didDeleteFood(_ food: FoodData)
     func didSavedFood()
     func didFailWithError(error: Error)
 }
 
 class FoodManager {
-    
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
+        
     var delegate: FoodManagerDelegate?
+    let realm = try! Realm()
     
     //MARK: Manipulate local data
     
     func loadLocalfood() {
         //Load from db
-        let request: NSFetchRequest<Food> = Food.fetchRequest()
-        
         do {
-            // TODO check delete not working
-//            let food = Food(context: self.context)
-//            food.id = 1
-//            food.name = "Pasta"
-//            food.url = "https://spoonacular.com/productImages/481652-312x231.jpg"
-            try saveFood()
-            let foods = try context.fetch(request).map({ food -> FoodModel in
-                FoodModel(foodId: food.id, foodName: food.name, foodUrl: food.url)
-            })
+            let foods = try realm.objects(FoodData.self)
             delegate?.didUpdateFoods(self, foods: foods)
         } catch {
             delegate?.didFailWithError(error: error)
         }
     }
     
-    func saveFood() throws {
+    func saveFood(food: FoodData) throws {
         do {
-            try context.save()
+            try realm.write {
+                realm.add(food)
+            }
         } catch {
             print("Error saving category \(error)")
             throw error
@@ -55,29 +46,27 @@ class FoodManager {
     }
     
     func saveFood(foodModel: FoodModel) {
-        let food = Food(context: self.context)
+        let food = FoodData()
         do {
-            food.id = foodModel.foodId
-            food.name = foodModel.foodName
-            food.url = foodModel.foodUrl
-            try saveFood()
+            food.foodId = foodModel.foodId
+            food.foodName = foodModel.foodName
+            food.foodUrl = foodModel.foodUrl
+            try saveFood(food: food)
             delegate?.didSavedFood()
         } catch {
             delegate?.didFailWithError(error: error)
         }
     }
     
-    func deleteFood(_ food: FoodModel) {
+    func deleteFood(_ food: FoodData) {
         do {
-            let request: NSFetchRequest<Food> = Food.fetchRequest()
-            request.predicate = NSPredicate(format: "id == %d", food.foodId)
-            let dbFood = try context.fetch(request)
-            
-            context.delete(dbFood[0])
-            try context.save()
+            try realm.write {
+                realm.delete(food)
+            }
             delegate?.didDeleteFood(food)
         } catch {
             print("Error saving category \(error)")
+            delegate?.didFailWithError(error: error)
         }
     }
 }

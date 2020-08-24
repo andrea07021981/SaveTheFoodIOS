@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SearchFoodViewController : UIViewController {
     
@@ -44,19 +45,21 @@ extension SearchFoodViewController : FoodNetworkManagerDelegate {
     }
 }
 
+
 //MARK: Food local delegate
 extension SearchFoodViewController : FoodManagerDelegate {
-    func didSavedFood() {
-         self.navigationController?.popViewController(animated: true)
-    }
-    
-    func didUpdateFoods(_ foodManager: FoodManager, foods: [FoodModel]) {
+    func didUpdateFoods(_ foodManager: FoodManager, foods: Results<FoodData>?) {
         
     }
     
-    func didDeleteFood(_ food: FoodModel) {
-       
+    func didDeleteFood(_ food: FoodData) {
+        
     }
+    
+    func didSavedFood() {
+        self.navigationController?.popViewController(animated: true)
+    }
+
 }
 
 // MARK: - Search bar methids

@@ -18,7 +18,10 @@ target 'SaveTheFood' do
   pod 'Firebase/Crashlytics'
   # add pods for any other desired Firebase products
   # https://firebase.google.com/docs/ios/setup#available-pods
-  
+  pod 'RealmSwift'
+   pod 'SwipeCellKit'
+   pod 'ChameleonFramework/Swift', :git => 'https://github.com/wowansm/Chameleon.git',
+   :branch => 'swift5'
   target 'SaveTheFoodTests' do
     inherit! :search_paths
     # Pods for testing
