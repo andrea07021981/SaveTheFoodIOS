@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BAY-wB-fcl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BAY-wB-fcl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -62,23 +62,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="NW7-fL-UFp" userLabel="Background">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="808"/>
                                 <color key="backgroundColor" white="1" alpha="0.68463720034246578" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="808" id="LrV-Af-gJ6"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="CIl-fm-yeq">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save The Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paf-hr-1D2">
-                                        <rect key="frame" x="8" y="8" width="398" height="256"/>
+                                        <rect key="frame" x="8" y="8" width="398" height="204"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="52"/>
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qRO-Db-GPT">
-                                        <rect key="frame" x="8" y="364" width="398" height="146"/>
+                                        <rect key="frame" x="8" y="312" width="398" height="146"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a@a.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CMx-D0-iHe">
                                                 <rect key="frame" x="20" y="8" width="358" height="60"/>
@@ -97,7 +97,7 @@
                                         <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="20" bottom="8" trailing="20"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SeX-g0-9UV">
-                                        <rect key="frame" x="8" y="610" width="398" height="156"/>
+                                        <rect key="frame" x="8" y="558" width="398" height="156"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6P-xm-s2D" customClass="RoundButton" customModule="SaveTheFood" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="8" width="358" height="60"/>
@@ -169,7 +169,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="62r-WU-YrM"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="dp6-fa-dxs"/>
+                    <navigationItem key="navigationItem" id="dp6-fa-dxs"/>
                     <connections>
                         <outlet property="emailTextField" destination="CMx-D0-iHe" id="BCM-Ce-QDt"/>
                         <outlet property="pswTextField" destination="SsC-xN-3bk" id="M8I-qD-MAk"/>
@@ -190,7 +190,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cMM-ZI-pb4">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" name="Primary"/>
                                 <color key="tintColor" name="Primary"/>
                             </tableView>
@@ -205,7 +205,6 @@
                         <viewLayoutGuide key="safeArea" id="6Py-W7-LFT"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="xr6-B8-2AI">
-                        <barButtonItem key="backBarButtonItem" title="home" id="SP7-mq-Pep"/>
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="7aE-D6-4OP">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -234,7 +233,7 @@
             <objects>
                 <viewController id="qJ7-vh-7c8" customClass="FoodDetailViewController" customModule="SaveTheFood" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ogc-hf-KZF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="mGf-kA-Jhp"/>
@@ -253,7 +252,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="food name" translatesAutoresizingMaskIntoConstraints="NO" id="Ayg-Zx-oDU">
-                                <rect key="frame" x="10" y="98" width="394" height="60"/>
+                                <rect key="frame" x="10" y="150" width="394" height="60"/>
                                 <color key="backgroundColor" name="Primary"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="bQY-2B-ldT"/>
@@ -266,7 +265,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-Js-hAb">
-                                <rect key="frame" x="10" y="168" width="394" height="684"/>
+                                <rect key="frame" x="10" y="220" width="394" height="632"/>
                                 <color key="backgroundColor" name="Primary"/>
                                 <color key="tintColor" name="Primary"/>
                                 <color key="separatorColor" name="Primary"/>
@@ -309,6 +308,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="WcM-OC-Hc1">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.15933257340000001" green="0.20588669179999999" blue="0.29021334650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" name="Primary"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -326,7 +326,7 @@
             </objects>
             <point key="canvasLocation" x="618.84057971014499" y="137.94642857142856"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--Sign Up-->
         <scene sceneID="kSc-1m-GQ6">
             <objects>
                 <viewController id="6yF-6A-SX5" customClass="SignUpViewController" customModule="SaveTheFood" customModuleProvider="target" sceneMemberID="viewController">
@@ -403,7 +403,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PGK-Td-0bU"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9Hs-mf-n7p"/>
+                    <navigationItem key="navigationItem" title="Sign Up" largeTitleDisplayMode="never" id="9Hs-mf-n7p"/>
                     <connections>
                         <outlet property="emailTextField" destination="oLI-0j-A3i" id="fPj-lF-akl"/>
                         <outlet property="passwordTextField" destination="reU-j2-YP9" id="t3o-w3-xKS"/>
@@ -418,6 +418,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="iBx-Sj-r0t"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Background" width="164.5" height="247"/>
         <image name="Food" width="24" height="24"/>
