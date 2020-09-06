@@ -26,6 +26,7 @@
 		029F681924AAC45F008FC555 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F681824AAC45F008FC555 /* LoginViewController.swift */; };
 		029FE7B524F40C4300AE4665 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FE7B424F40C4300AE4665 /* FoodData.swift */; };
 		029FE7B724F41C6700AE4665 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FE7B624F41C6700AE4665 /* FoodDetailViewController.swift */; };
+		02A4E02925055B0B00FA5B80 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A4E02825055B0B00FA5B80 /* UserManager.swift */; };
 		02DF966F24B9139F00B2AC7A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DF966E24B9139F00B2AC7A /* HomeViewController.swift */; };
 		02DF967524B91D4600B2AC7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02DF967424B91D4600B2AC7A /* GoogleService-Info.plist */; };
 		02F2D23A24AFB9E800EE5043 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2D23924AFB9E800EE5043 /* K.swift */; };
@@ -78,6 +79,7 @@
 		029F681824AAC45F008FC555 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		029FE7B424F40C4300AE4665 /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
 		029FE7B624F41C6700AE4665 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		02A4E02825055B0B00FA5B80 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		02DF966E24B9139F00B2AC7A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		02DF967424B91D4600B2AC7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		02F2D23924AFB9E800EE5043 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				0288513424E979AC00420426 /* FoodNetworkData.swift */,
 				0288513624E97ACD00420426 /* FoodModel.swift */,
 				020D21C624EAD610008DCF99 /* FoodNetworkManager.swift */,
+				02A4E02825055B0B00FA5B80 /* UserManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				020D21C524EAC434008DCF99 /* SearchFoodViewController.swift in Sources */,
 				0245BF1F247DFE3C00646910 /* SceneDelegate.swift in Sources */,
 				02F2D23A24AFB9E800EE5043 /* K.swift in Sources */,
+				02A4E02925055B0B00FA5B80 /* UserManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

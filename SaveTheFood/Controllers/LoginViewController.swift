@@ -13,8 +13,11 @@ class LoginViewController: UIViewController {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var pswTextField: UITextField!
     
+    private var userManager = UserManeger()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        userManager.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -29,13 +32,7 @@ class LoginViewController: UIViewController {
     }
     @IBAction func signInPressed(_ sender: UIButton) {
         if let email = emailTextField.text, let password = pswTextField.text {
-            Auth.auth().signIn(withEmail: email, password: password) { authresult, error in
-                if let e = error {
-                    self.showAlert(msg: e.localizedDescription)
-                } else {
-                    self.performSegue(withIdentifier: K.loginHomeSegue, sender: self)
-                }
-            }
+            userManager.doLoginWithEmailPass(email: email, pass: password)
         } else {
             showAlert(msg: "Email and password required")
         }
@@ -62,5 +59,16 @@ class LoginViewController: UIViewController {
             backItem.title = "Exit"
             navigationItem.backBarButtonItem = backItem
         }
+    }
+}
+
+//MARK: delegate manager
+extension LoginViewController : UserManagerDelegate {
+    func didRequestUser(_ userManager: UserManeger, user: AuthDataResult) {
+        self.performSegue(withIdentifier: K.loginHomeSegue, sender: self)
+    }
+    
+    func didFailWithError(error: String) {
+        showAlert(msg: error)
     }
 }
