@@ -22,7 +22,7 @@ class HomeViewController : UIViewController {
         
         foodsTableView.dataSource = self
         foodsTableView.delegate = self
-        foodsTableView.register(UINib(nibName: K.foodCell, bundle: nil), forCellReuseIdentifier: K.foodCellIdentifier)
+        foodsTableView.register(UINib(nibName: K.foodCell, bundle: nil), forCellReuseIdentifier: "Cell")
         
         foodManager.loadLocalfood()
         self.navigationItem.setHidesBackButton(true, animated: true);
@@ -65,7 +65,7 @@ extension HomeViewController : FoodManagerDelegate{
     }
     
     func didDeleteFood(_ food: FoodData) {
-        self.foodsTableView.reloadData()
+        
     }
     
     func didUpdateFoods(_ foodManager: FoodManager, foods: Results<FoodData>?) {
@@ -87,7 +87,7 @@ extension HomeViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.foodCellIdentifier, for: indexPath) as! FoodCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FoodCell
         if let food = foods?[indexPath.row] {
             cell.foodNameLabel.text = food.foodName
             if let url = URL(string: food.foodUrl!) {
@@ -96,6 +96,7 @@ extension HomeViewController : UITableViewDataSource {
         } else {
             cell.textLabel?.text = "No Food Added"
         }
+        cell.delegate = self
         return cell
     }
    

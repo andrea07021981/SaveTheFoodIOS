@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import IQKeyboardManagerSwift
 import RealmSwift
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,6 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enableAutoToolbar = false
         //Keyboard hide whent touching outside
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true;
+        
+        //Push
+        registerForPushNotifications()
         return true
     }
 
@@ -47,6 +51,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
+    }
+    
+    func registerForPushNotifications() {
+      UNUserNotificationCenter.current() // 1
+        .requestAuthorization(options: [.alert, .sound, .badge]) { // 2
+          granted, error in
+            if (error != nil) {
+                print(error)
+            } else {
+                DispatchQueue.main.async() {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
+            print("Permission granted: \(granted)") // 3
+      }
     }
 }
 

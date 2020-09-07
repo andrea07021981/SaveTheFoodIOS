@@ -3,18 +3,18 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "HomeViewController.tableView(_:commit:forRowAt:):HomeViewController.swift">
+         contextName = "closure #1 in HomeViewController.tableView(_:editActionsForRowAt:for:):HomeViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "foods[indexPath.row]">
+               value = "self.foods?.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "FoodManager.deleteFood(_:):FoodManager.swift">
+         contextName = "HomeViewController.tableView(_:commit:forRowAt:):HomeViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "context">
+               value = "foods[indexPath.row]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -25,6 +25,20 @@
                value = "navigationController?.viewControllers">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HomeViewController.didUpdateFoods(_:foods:):HomeViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "FoodManager.deleteFood(_:):FoodManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "context">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:AppDelegate.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -5,6 +5,9 @@ target 'SaveTheFood' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+  # Pods retrofit
+  pod 'RetrofireSwift', '0.3.1'
+  
   # Pods for SaveTheFood
   pod 'IQKeyboardManagerSwift'
   # pod "ElValidator"
@@ -25,6 +28,7 @@ target 'SaveTheFood' do
   target 'SaveTheFoodTests' do
     inherit! :search_paths
     # Pods for testing
+    
   end
 
   target 'SaveTheFoodUITests' do

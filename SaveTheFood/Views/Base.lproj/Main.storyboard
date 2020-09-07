@@ -233,7 +233,7 @@
             <objects>
                 <viewController id="qJ7-vh-7c8" customClass="FoodDetailViewController" customModule="SaveTheFood" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ogc-hf-KZF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="mGf-kA-Jhp"/>

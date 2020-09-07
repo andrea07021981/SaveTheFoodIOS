@@ -20,6 +20,8 @@ class FoodNetworkManager {
     //https://api.spoonacular.com/food/products/search?apiKey=dc03ecff1b4e4630b92c6cf4d7412449&query=meat
     let url = K.base_url + "food/products/search?"
     
+    //TODO add retrofit
+    
     var delegate: FoodNetworkManagerDelegate?
     
     //MARK: Manipulate network data

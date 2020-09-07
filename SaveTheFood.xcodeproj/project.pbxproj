@@ -79,6 +79,7 @@
 		029F681824AAC45F008FC555 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		029FE7B424F40C4300AE4665 /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
 		029FE7B624F41C6700AE4665 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		02A15E6D25066AF000810C10 /* SaveTheFood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SaveTheFood.entitlements; sourceTree = "<group>"; };
 		02A4E02825055B0B00FA5B80 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		02DF966E24B9139F00B2AC7A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		02DF967424B91D4600B2AC7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 		0245BF1B247DFE3C00646910 /* SaveTheFood */ = {
 			isa = PBXGroup;
 			children = (
+				02A15E6D25066AF000810C10 /* SaveTheFood.entitlements */,
 				0288513124E977F100420426 /* Model */,
 				02DF967424B91D4600B2AC7A /* GoogleService-Info.plist */,
 				0289DAB424AE916E00F3BC05 /* UI */,
@@ -687,6 +689,7 @@
 			baseConfigurationReference = 24BFA876AE050FE6F4FD7F63 /* Pods-SaveTheFood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SaveTheFood/SaveTheFood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SHFRBYH985;
 				INFOPLIST_FILE = SaveTheFood/Info.plist;
@@ -706,6 +709,7 @@
 			baseConfigurationReference = B82A0836EAEB7D4465EBD156 /* Pods-SaveTheFood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SaveTheFood/SaveTheFood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SHFRBYH985;
 				INFOPLIST_FILE = SaveTheFood/Info.plist;
