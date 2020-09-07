@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class FoodCell: UITableViewCell {
+class FoodCell: SwipeTableViewCell {
 
     @IBOutlet var containerView: UIView!
     @IBOutlet var foodNameLabel: UILabel!

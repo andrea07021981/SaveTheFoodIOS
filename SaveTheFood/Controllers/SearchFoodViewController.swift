@@ -28,7 +28,7 @@ class SearchFoodViewController : UIViewController {
         searchBar.delegate = self
         tableViewFoods.dataSource = self
         tableViewFoods.delegate = self
-        tableViewFoods.register(UINib(nibName: K.foodCell, bundle: nil), forCellReuseIdentifier: K.foodCellIdentifier)
+        tableViewFoods.register(UINib(nibName: K.foodCell, bundle: nil), forCellReuseIdentifier: "Cell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,7 +70,32 @@ extension SearchFoodViewController : FoodManagerDelegate {
     
     func didSavedFood() {
         self.navigationController?.popViewController(animated: true)
-    }
+        
+        //Ask for permissions
+//        let center = UNUserNotificationCenter.current()
+//        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+//
+//        }
+        
+        //Create a notification content
+        let content = UNMutableNotificationContent()
+        content.title = "Info food"
+        content.body = "Food Added"
+
+        // Create the notification trigger
+        let date = Date().addingTimeInterval(1)
+        let dateComponent = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: false)
+        
+        // Create the request
+        let uuiString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuiString, content: content, trigger: trigger)
+        
+        // Register the request
+        UNUserNotificationCenter.current().add(request) { (error) in
+            print(error)
+        }
+     }
 
 }
 
@@ -93,7 +118,7 @@ extension SearchFoodViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let food = foods[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.foodCellIdentifier, for: indexPath) as! FoodCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FoodCell
         
         cell.foodNameLabel.text = food.foodName
         if let url = URL(string: food.foodUrl!) {
