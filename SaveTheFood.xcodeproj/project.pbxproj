@@ -23,6 +23,8 @@
 		0288514024E9966500420426 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288513E24E9966500420426 /* FoodCell.swift */; };
 		0288514124E9966500420426 /* FoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0288513F24E9966500420426 /* FoodCell.xib */; };
 		0289DAB624AE918500F3BC05 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289DAB524AE918500F3BC05 /* RoundButton.swift */; };
+		028D6BA22506984E00E4A8AE /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028D6BA12506984E00E4A8AE /* LoginTest.swift */; };
+		028D6BA425069B1D00E4A8AE /* MockUserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028D6BA325069B1D00E4A8AE /* MockUserDelegate.swift */; };
 		029F681924AAC45F008FC555 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F681824AAC45F008FC555 /* LoginViewController.swift */; };
 		029FE7B524F40C4300AE4665 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FE7B424F40C4300AE4665 /* FoodData.swift */; };
 		029FE7B724F41C6700AE4665 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FE7B624F41C6700AE4665 /* FoodDetailViewController.swift */; };
@@ -76,6 +78,8 @@
 		0288513E24E9966500420426 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		0288513F24E9966500420426 /* FoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCell.xib; sourceTree = "<group>"; };
 		0289DAB524AE918500F3BC05 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		028D6BA12506984E00E4A8AE /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
+		028D6BA325069B1D00E4A8AE /* MockUserDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDelegate.swift; sourceTree = "<group>"; };
 		029F681824AAC45F008FC555 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		029FE7B424F40C4300AE4665 /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
 		029FE7B624F41C6700AE4665 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 			children = (
 				0245BF33247DFE3D00646910 /* SaveTheFoodTests.swift */,
 				0245BF35247DFE3D00646910 /* Info.plist */,
+				028D6BA12506984E00E4A8AE /* LoginTest.swift */,
+				028D6BA325069B1D00E4A8AE /* MockUserDelegate.swift */,
 			);
 			path = SaveTheFoodTests;
 			sourceTree = "<group>";
@@ -524,6 +530,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0245BF34247DFE3D00646910 /* SaveTheFoodTests.swift in Sources */,
+				028D6BA425069B1D00E4A8AE /* MockUserDelegate.swift in Sources */,
+				028D6BA22506984E00E4A8AE /* LoginTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
