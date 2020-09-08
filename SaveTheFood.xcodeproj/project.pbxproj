@@ -33,6 +33,7 @@
 		02DF967524B91D4600B2AC7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02DF967424B91D4600B2AC7A /* GoogleService-Info.plist */; };
 		02F2D23A24AFB9E800EE5043 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2D23924AFB9E800EE5043 /* K.swift */; };
 		02F2D23C24AFC76C00EE5043 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2D23B24AFC76C00EE5043 /* SignUpViewController.swift */; };
+		02FB1F302507EB8700F5B72C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FB1F2F2507EB8600F5B72C /* CardView.swift */; };
 		1629F5C32ADC0C50CAB4902F /* Pods_SaveTheFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66F5A53E56E005958FFCB2B /* Pods_SaveTheFood.framework */; };
 		BC1E475D47D2F7B539442E53 /* Pods_SaveTheFood_SaveTheFoodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B04F6345D97B48E5FC94D43A /* Pods_SaveTheFood_SaveTheFoodUITests.framework */; };
 		CB29891A8A05C82B88734E6F /* Pods_SaveTheFoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F45BC0EBE85731F4962EED2 /* Pods_SaveTheFoodTests.framework */; };
@@ -89,6 +90,7 @@
 		02DF967424B91D4600B2AC7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		02F2D23924AFB9E800EE5043 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		02F2D23B24AFC76C00EE5043 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		02FB1F2F2507EB8600F5B72C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		1165A9935F3AC4B38FD76CFD /* Pods-SaveTheFoodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaveTheFoodTests.debug.xcconfig"; path = "Target Support Files/Pods-SaveTheFoodTests/Pods-SaveTheFoodTests.debug.xcconfig"; sourceTree = "<group>"; };
 		24BFA876AE050FE6F4FD7F63 /* Pods-SaveTheFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaveTheFood.debug.xcconfig"; path = "Target Support Files/Pods-SaveTheFood/Pods-SaveTheFood.debug.xcconfig"; sourceTree = "<group>"; };
 		4F45BC0EBE85731F4962EED2 /* Pods_SaveTheFoodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SaveTheFoodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				0289DAB524AE918500F3BC05 /* RoundButton.swift */,
+				02FB1F2F2507EB8600F5B72C /* CardView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				02DF966F24B9139F00B2AC7A /* HomeViewController.swift in Sources */,
 				0245BF1D247DFE3C00646910 /* AppDelegate.swift in Sources */,
 				029F681924AAC45F008FC555 /* LoginViewController.swift in Sources */,
+				02FB1F302507EB8700F5B72C /* CardView.swift in Sources */,
 				0288513524E979AC00420426 /* FoodNetworkData.swift in Sources */,
 				020D21C724EAD610008DCF99 /* FoodNetworkManager.swift in Sources */,
 				029FE7B524F40C4300AE4665 /* FoodData.swift in Sources */,

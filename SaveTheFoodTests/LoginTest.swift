@@ -7,17 +7,19 @@
 //
 
 import XCTest
+import Firebase
 @testable import SaveTheFood
 
-class LoginTest: XCTestCase {
+class LoginTest: XCTestCase, UserManagerDelegate {
     
     private var userManager: UserManeger?
-    private var userManagerDelegate: MockUserDelegate?
+    private var expectation: XCTestExpectation?
+    private var user: AuthDataResult?
     
     override func setUp() {
         userManager = UserManeger()
-        userManagerDelegate = MockUserDelegate()
-        userManager?.delegate = userManagerDelegate
+        userManager?.delegate = self
+        self.expectation = XCTestExpectation(description: "Test")
         super.setUp()
     }
 
@@ -28,6 +30,17 @@ class LoginTest: XCTestCase {
     func test_login_successful() {
         userManager?.doLoginWithEmailPass(email: "a@a.com", pass: "aaaaa")
         
-        XCTAssertTrue(((userManagerDelegate?.isUserIsAuthenticated) != nil && (userManagerDelegate?.isUserIsAuthenticated == false)))
+        // We need a timeout, doesn't work
+        let expectation = self.expectation(description: "Scaling")
+        XCTAssertNotNil(self.user)
     }
+    
+    func didRequestUser(_ userManager: UserManeger, user: AuthDataResult) {
+        self.user = user
+    }
+    
+    func didFailWithError(error: String) {
+        
+    }
+
 }
