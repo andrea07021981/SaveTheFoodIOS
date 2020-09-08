@@ -10,7 +10,17 @@ import UIKit
 
 class FoodDetailViewController : UIViewController {
     
+    var selectedFood: FoodData? {
+        didSet {
+            loadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    private func loadData() {
+        
     }
 }

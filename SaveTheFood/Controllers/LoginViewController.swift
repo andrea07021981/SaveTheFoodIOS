@@ -13,12 +13,27 @@ class LoginViewController: UIViewController {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var pswTextField: UITextField!
     
+    private let backgroundImageView = UIImageView()
+    
     private var userManager = UserManeger()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         userManager.delegate = self
         // Do any additional setup after loading the view.
+        setBackground()
+    }
+    
+    private func setBackground() {
+        view.addSubview(backgroundImageView)
+        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        backgroundImageView.image = UIImage(named: "Background")
+        view.sendSubviewToBack(backgroundImageView)
+        backgroundImageView.contentMode = .scaleAspectFill
     }
     
     override func viewWillAppear(_ animated: Bool) {

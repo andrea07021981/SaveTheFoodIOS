@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BAY-wB-fcl">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" userLabel="SpashViewController" customClass="SpashViewController" customModule="SaveTheFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEn-Iz-Azp">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Food" translatesAutoresizingMaskIntoConstraints="NO" id="3x5-Rz-ZCT">
-                                        <rect key="frame" x="132" y="329" width="150" height="150"/>
+                                        <rect key="frame" x="112.66666666666669" y="287" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="4In-39-hTo"/>
                                             <constraint firstAttribute="width" constant="150" id="6Ja-gv-4ev"/>
@@ -58,114 +58,102 @@
             <objects>
                 <viewController id="b8G-IV-NXo" customClass="LoginViewController" customModule="SaveTheFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GTW-aq-zFQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="NW7-fL-UFp" userLabel="Background">
-                                <rect key="frame" x="0.0" y="140" width="414" height="808"/>
-                                <color key="backgroundColor" white="1" alpha="0.68463720034246578" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save The Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="paf-hr-1D2">
+                                <rect key="frame" x="46" y="220.33333333333334" width="283" height="67.666666666666657"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="52"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a@a.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CMx-D0-iHe">
+                                <rect key="frame" x="30" y="408" width="315" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="808" id="LrV-Af-gJ6"/>
+                                    <constraint firstAttribute="height" constant="40" id="kzS-oQ-hJQ"/>
                                 </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="CIl-fm-yeq">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save The Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paf-hr-1D2">
-                                        <rect key="frame" x="8" y="8" width="398" height="204"/>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="52"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qRO-Db-GPT">
-                                        <rect key="frame" x="8" y="312" width="398" height="146"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a@a.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CMx-D0-iHe">
-                                                <rect key="frame" x="20" y="8" width="358" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="kzS-oQ-hJQ"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next" textContentType="email"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="aaaaaa" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SsC-xN-3bk">
-                                                <rect key="frame" x="20" y="78" width="358" height="60"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="go" textContentType="password"/>
-                                            </textField>
-                                        </subviews>
-                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="20" bottom="8" trailing="20"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SeX-g0-9UV">
-                                        <rect key="frame" x="8" y="558" width="398" height="156"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6P-xm-s2D" customClass="RoundButton" customModule="SaveTheFood" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="8" width="358" height="60"/>
-                                                <color key="backgroundColor" red="0.47450980392156861" green="0.066666666666666666" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="SLE-5T-AxK"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <state key="normal" title="Sign In">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="signInPressed:" destination="b8G-IV-NXo" eventType="touchUpInside" id="7ey-xF-uub"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2r-rN-Xla" customClass="RoundButton" customModule="SaveTheFood" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="88" width="358" height="60"/>
-                                                <color key="backgroundColor" red="0.47450980390000003" green="0.066666666669999999" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="5IU-Rk-f1P"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <state key="normal" title="Sign Up">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="signUpPressed:" destination="b8G-IV-NXo" eventType="touchUpInside" id="H2U-Iz-oza"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="20"/>
-                                    </stackView>
-                                </subviews>
-                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                            </stackView>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="aaaaaa" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SsC-xN-3bk">
+                                <rect key="frame" x="30" y="478" width="315" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yu8-Fn-iVF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="go" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6P-xm-s2D" customClass="RoundButton" customModule="SaveTheFood" customModuleProvider="target">
+                                <rect key="frame" x="30" y="608" width="315" height="60"/>
+                                <color key="backgroundColor" red="0.47450980392156861" green="0.066666666666666666" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="SLE-5T-AxK"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="xeB-bS-l5S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signInPressed:" destination="b8G-IV-NXo" eventType="touchUpInside" id="7ey-xF-uub"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2r-rN-Xla" customClass="RoundButton" customModule="SaveTheFood" customModuleProvider="target">
+                                <rect key="frame" x="30" y="698" width="315" height="60"/>
+                                <color key="backgroundColor" red="0.47450980390000003" green="0.066666666669999999" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5IU-Rk-f1P"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="x6L-KJ-1oE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signUpPressed:" destination="b8G-IV-NXo" eventType="touchUpInside" id="H2U-Iz-oza"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="CIl-fm-yeq" firstAttribute="top" secondItem="62r-WU-YrM" secondAttribute="top" id="48J-IJ-M30"/>
-                            <constraint firstAttribute="bottom" secondItem="NW7-fL-UFp" secondAttribute="bottom" id="6wT-xj-gEF"/>
-                            <constraint firstItem="CIl-fm-yeq" firstAttribute="leading" secondItem="62r-WU-YrM" secondAttribute="leading" id="9NT-uo-o2O"/>
-                            <constraint firstItem="NW7-fL-UFp" firstAttribute="top" secondItem="62r-WU-YrM" secondAttribute="top" id="KaT-kA-gwc"/>
-                            <constraint firstItem="CIl-fm-yeq" firstAttribute="bottom" secondItem="62r-WU-YrM" secondAttribute="bottom" id="Qro-SW-RxS"/>
-                            <constraint firstItem="62r-WU-YrM" firstAttribute="trailing" secondItem="CIl-fm-yeq" secondAttribute="trailing" id="mxy-cS-QmL"/>
-                            <constraint firstItem="NW7-fL-UFp" firstAttribute="leading" secondItem="CIl-fm-yeq" secondAttribute="leading" id="shj-ZN-Khj"/>
-                            <constraint firstItem="NW7-fL-UFp" firstAttribute="trailing" secondItem="CIl-fm-yeq" secondAttribute="trailing" id="yzn-F9-3l3"/>
+                            <constraint firstItem="CMx-D0-iHe" firstAttribute="top" secondItem="paf-hr-1D2" secondAttribute="bottom" constant="120" id="315-G9-VxW"/>
+                            <constraint firstAttribute="trailing" secondItem="SsC-xN-3bk" secondAttribute="trailing" constant="30" id="FDa-Sn-z0E"/>
+                            <constraint firstItem="CMx-D0-iHe" firstAttribute="leading" secondItem="GTW-aq-zFQ" secondAttribute="leading" constant="30" id="Gxy-QR-mes"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="paf-hr-1D2" secondAttribute="trailing" constant="30" id="Kdu-5v-ef4"/>
+                            <constraint firstItem="H2r-rN-Xla" firstAttribute="leading" secondItem="GTW-aq-zFQ" secondAttribute="leading" constant="30" id="Mcw-2p-G4c"/>
+                            <constraint firstItem="n6P-xm-s2D" firstAttribute="leading" secondItem="GTW-aq-zFQ" secondAttribute="leading" constant="30" id="Wv3-KI-Ij9"/>
+                            <constraint firstAttribute="trailing" secondItem="CMx-D0-iHe" secondAttribute="trailing" constant="30" id="XTW-9K-Qof"/>
+                            <constraint firstItem="n6P-xm-s2D" firstAttribute="top" secondItem="SsC-xN-3bk" secondAttribute="bottom" constant="90" id="bng-6m-ANS"/>
+                            <constraint firstItem="62r-WU-YrM" firstAttribute="bottom" secondItem="H2r-rN-Xla" secondAttribute="bottom" constant="20" id="fPg-6M-yol"/>
+                            <constraint firstItem="H2r-rN-Xla" firstAttribute="top" secondItem="n6P-xm-s2D" secondAttribute="bottom" constant="30" id="gJi-FF-uuy"/>
+                            <constraint firstItem="paf-hr-1D2" firstAttribute="leading" secondItem="GTW-aq-zFQ" secondAttribute="leadingMargin" constant="30" id="h1C-e0-YhQ"/>
+                            <constraint firstItem="paf-hr-1D2" firstAttribute="centerX" secondItem="GTW-aq-zFQ" secondAttribute="centerX" id="kBM-o2-xgX"/>
+                            <constraint firstItem="SsC-xN-3bk" firstAttribute="top" secondItem="CMx-D0-iHe" secondAttribute="bottom" constant="30" id="qXY-xt-o9O"/>
+                            <constraint firstItem="SsC-xN-3bk" firstAttribute="leading" secondItem="GTW-aq-zFQ" secondAttribute="leading" constant="30" id="sIE-0X-fAy"/>
+                            <constraint firstAttribute="trailing" secondItem="n6P-xm-s2D" secondAttribute="trailing" constant="30" id="tHi-vJ-WW1"/>
+                            <constraint firstAttribute="trailing" secondItem="H2r-rN-Xla" secondAttribute="trailing" constant="30" id="tNL-8C-XSP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="62r-WU-YrM"/>
                     </view>
@@ -186,11 +174,11 @@
             <objects>
                 <viewController id="Oci-90-FNK" customClass="HomeViewController" customModule="SaveTheFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ScI-yp-iM9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cMM-ZI-pb4">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <color key="backgroundColor" name="Primary"/>
                                 <color key="tintColor" name="Primary"/>
                             </tableView>
@@ -221,7 +209,7 @@
                     <connections>
                         <outlet property="foodsTableView" destination="cMM-ZI-pb4" id="Y2P-xt-aI7"/>
                         <segue destination="Sph-OK-oRh" kind="show" identifier="HomeToSearchFood" id="Sbb-rZ-XfU"/>
-                        <segue destination="qJ7-vh-7c8" kind="showDetail" identifier="HomeToDetailFood" id="TE4-kJ-jA3"/>
+                        <segue destination="qJ7-vh-7c8" kind="show" identifier="HomeToDetailFood" id="TE4-kJ-jA3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E2Y-vn-zJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -233,26 +221,45 @@
             <objects>
                 <viewController id="qJ7-vh-7c8" customClass="FoodDetailViewController" customModule="SaveTheFood" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ogc-hf-KZF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tiv-kP-LsZ" customClass="CardView" customModule="SaveTheFood">
+                                <rect key="frame" x="20" y="108" width="335" height="337"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NFG-1f-y0u">
+                                <rect key="frame" x="10" y="505" width="355" height="110"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="Primary"/>
+                        <constraints>
+                            <constraint firstItem="Tiv-kP-LsZ" firstAttribute="top" secondItem="mGf-kA-Jhp" secondAttribute="top" constant="20" id="4IF-rp-FTt"/>
+                            <constraint firstItem="NFG-1f-y0u" firstAttribute="top" secondItem="Tiv-kP-LsZ" secondAttribute="bottom" constant="60" id="6Ad-X0-ull"/>
+                            <constraint firstItem="mGf-kA-Jhp" firstAttribute="trailing" secondItem="NFG-1f-y0u" secondAttribute="trailing" constant="10" id="Zio-PN-jN2"/>
+                            <constraint firstItem="Tiv-kP-LsZ" firstAttribute="leading" secondItem="mGf-kA-Jhp" secondAttribute="leading" constant="20" id="rlR-Xc-hhR"/>
+                            <constraint firstItem="mGf-kA-Jhp" firstAttribute="bottom" secondItem="NFG-1f-y0u" secondAttribute="bottom" constant="247" id="t28-qR-tc4"/>
+                            <constraint firstItem="NFG-1f-y0u" firstAttribute="leading" secondItem="mGf-kA-Jhp" secondAttribute="leading" constant="10" id="ubg-TA-VWt"/>
+                            <constraint firstItem="mGf-kA-Jhp" firstAttribute="trailing" secondItem="Tiv-kP-LsZ" secondAttribute="trailing" constant="20" id="x9b-Nh-EZL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mGf-kA-Jhp"/>
                     </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="GEd-ig-3PV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNa-tc-cv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4380" y="968"/>
+            <point key="canvasLocation" x="4379.7101449275369" y="967.63392857142856"/>
         </scene>
         <!--search-->
         <scene sceneID="QYU-d9-gJM">
             <objects>
                 <viewController id="Sph-OK-oRh" customClass="SearchFoodViewController" customModule="SaveTheFood" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gKo-lW-JvU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="food name" translatesAutoresizingMaskIntoConstraints="NO" id="Ayg-Zx-oDU">
-                                <rect key="frame" x="10" y="150" width="394" height="60"/>
+                                <rect key="frame" x="10" y="98" width="355" height="60"/>
                                 <color key="backgroundColor" name="Primary"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="bQY-2B-ldT"/>
@@ -265,7 +272,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-Js-hAb">
-                                <rect key="frame" x="10" y="220" width="394" height="632"/>
+                                <rect key="frame" x="10" y="168" width="355" height="600"/>
                                 <color key="backgroundColor" name="Primary"/>
                                 <color key="tintColor" name="Primary"/>
                                 <color key="separatorColor" name="Primary"/>
@@ -306,7 +313,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BAY-wB-fcl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="WcM-OC-Hc1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.15933257340000001" green="0.20588669179999999" blue="0.29021334650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" name="Primary"/>
@@ -331,29 +338,19 @@
             <objects>
                 <viewController id="6yF-6A-SX5" customClass="SignUpViewController" customModule="SaveTheFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7hT-0B-4OQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="2hY-zI-IT9" userLabel="Background">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <color key="backgroundColor" white="1" alpha="0.68463720029999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="58s-md-7Wz">
-                                <rect key="frame" x="0.0" y="108" width="414" height="208"/>
+                                <rect key="frame" x="30" y="324.66666666666669" width="315" height="162.66666666666669"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oLI-0j-A3i">
-                                        <rect key="frame" x="20" y="8" width="374" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="2x8-Rg-LEF"/>
-                                        </constraints>
+                                        <rect key="frame" x="20" y="8" width="275" height="37.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="reU-j2-YP9">
-                                        <rect key="frame" x="20" y="140" width="374" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="x3y-0g-xil"/>
-                                        </constraints>
+                                        <rect key="frame" x="20" y="117.3333333333333" width="275" height="37.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="go" textContentType="password"/>
                                     </textField>
@@ -361,10 +358,10 @@
                                 <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="20"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2K-0y-3ZL" customClass="RoundButton" customModule="SaveTheFood" customModuleProvider="target">
-                                <rect key="frame" x="20" y="802" width="374" height="60"/>
+                                <rect key="frame" x="20" y="718" width="335" height="60"/>
                                 <color key="backgroundColor" red="0.47450980390000003" green="0.066666666669999999" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="1q9-7Z-yNg"/>
+                                    <constraint firstAttribute="height" constant="60" id="1q9-7Z-yNg"/>
                                     <constraint firstAttribute="height" constant="60" id="NSi-MP-HbO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -390,16 +387,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="58s-md-7Wz" firstAttribute="leading" secondItem="PGK-Td-0bU" secondAttribute="leading" id="FVo-nh-iLk"/>
-                            <constraint firstItem="2hY-zI-IT9" firstAttribute="bottom" secondItem="7hT-0B-4OQ" secondAttribute="bottom" id="HqJ-MG-Mwk"/>
+                            <constraint firstItem="58s-md-7Wz" firstAttribute="centerX" secondItem="7hT-0B-4OQ" secondAttribute="centerX" id="0A3-oD-pWi"/>
                             <constraint firstItem="v2K-0y-3ZL" firstAttribute="leading" secondItem="PGK-Td-0bU" secondAttribute="leading" constant="20" id="Jdk-Ck-VLe"/>
-                            <constraint firstItem="PGK-Td-0bU" firstAttribute="trailing" secondItem="58s-md-7Wz" secondAttribute="trailing" id="WQt-Jm-kwK"/>
-                            <constraint firstItem="2hY-zI-IT9" firstAttribute="trailing" secondItem="PGK-Td-0bU" secondAttribute="trailing" id="Wrg-7D-wE4"/>
+                            <constraint firstAttribute="trailing" secondItem="58s-md-7Wz" secondAttribute="trailing" constant="30" id="Ldz-UL-KpY"/>
+                            <constraint firstItem="58s-md-7Wz" firstAttribute="centerY" secondItem="7hT-0B-4OQ" secondAttribute="centerY" id="LzJ-ZI-xs8"/>
+                            <constraint firstItem="58s-md-7Wz" firstAttribute="leading" secondItem="7hT-0B-4OQ" secondAttribute="leading" constant="30" id="PHT-YU-75m"/>
                             <constraint firstItem="PGK-Td-0bU" firstAttribute="bottom" secondItem="v2K-0y-3ZL" secondAttribute="bottom" id="ZAD-aa-8mX"/>
                             <constraint firstItem="PGK-Td-0bU" firstAttribute="trailing" secondItem="v2K-0y-3ZL" secondAttribute="trailing" constant="20" id="Zn9-n2-I86"/>
-                            <constraint firstItem="2hY-zI-IT9" firstAttribute="top" secondItem="PGK-Td-0bU" secondAttribute="top" id="bLE-zC-moK"/>
-                            <constraint firstItem="2hY-zI-IT9" firstAttribute="leading" secondItem="PGK-Td-0bU" secondAttribute="leading" id="dNa-Dn-GOv"/>
-                            <constraint firstItem="58s-md-7Wz" firstAttribute="top" secondItem="PGK-Td-0bU" secondAttribute="top" constant="20" id="vjm-5e-2x5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PGK-Td-0bU"/>
                     </view>
@@ -416,11 +410,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iBx-Sj-r0t"/>
+        <segue reference="Myu-48-X8Y"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="Background" width="164.5" height="247"/>
         <image name="Food" width="24" height="24"/>
         <namedColor name="Primary">
             <color red="0.15686274509803921" green="0.20784313725490197" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
