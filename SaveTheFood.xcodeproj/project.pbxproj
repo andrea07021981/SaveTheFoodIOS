@@ -29,6 +29,7 @@
 		029FE7B524F40C4300AE4665 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FE7B424F40C4300AE4665 /* FoodData.swift */; };
 		029FE7B724F41C6700AE4665 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FE7B624F41C6700AE4665 /* FoodDetailViewController.swift */; };
 		02A4E02925055B0B00FA5B80 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A4E02825055B0B00FA5B80 /* UserManager.swift */; };
+		02DD90AD25093ECB000C886C /* NewFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD90AC25093ECB000C886C /* NewFoodViewController.swift */; };
 		02DF966F24B9139F00B2AC7A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DF966E24B9139F00B2AC7A /* HomeViewController.swift */; };
 		02DF967524B91D4600B2AC7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02DF967424B91D4600B2AC7A /* GoogleService-Info.plist */; };
 		02F2D23A24AFB9E800EE5043 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2D23924AFB9E800EE5043 /* K.swift */; };
@@ -86,6 +87,7 @@
 		029FE7B624F41C6700AE4665 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
 		02A15E6D25066AF000810C10 /* SaveTheFood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SaveTheFood.entitlements; sourceTree = "<group>"; };
 		02A4E02825055B0B00FA5B80 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		02DD90AC25093ECB000C886C /* NewFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFoodViewController.swift; sourceTree = "<group>"; };
 		02DF966E24B9139F00B2AC7A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		02DF967424B91D4600B2AC7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		02F2D23924AFB9E800EE5043 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				02DF966E24B9139F00B2AC7A /* HomeViewController.swift */,
 				020D21C424EAC434008DCF99 /* SearchFoodViewController.swift */,
 				029FE7B624F41C6700AE4665 /* FoodDetailViewController.swift */,
+				02DD90AC25093ECB000C886C /* NewFoodViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				02F2D23C24AFC76C00EE5043 /* SignUpViewController.swift in Sources */,
 				0288513724E97ACD00420426 /* FoodModel.swift in Sources */,
 				029FE7B724F41C6700AE4665 /* FoodDetailViewController.swift in Sources */,
+				02DD90AD25093ECB000C886C /* NewFoodViewController.swift in Sources */,
 				0288513324E9780400420426 /* FoodManager.swift in Sources */,
 				0288514024E9966500420426 /* FoodCell.swift in Sources */,
 				0289DAB624AE918500F3BC05 /* RoundButton.swift in Sources */,
