@@ -142,13 +142,15 @@ extension HomeViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: K.homeToDetailFoodSegue, sender: nil)
+        //performSegue(withIdentifier: K.homeToDetailFoodSegue, sender: nil)
+        performSegue(withIdentifier: "test", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! FoodDetailViewController
-        if let index = foodsTableView.indexPathForSelectedRow {
-            destination.selectedFood = foods?[index.row]
-        }
+        //Commented for test view
+//        let destination = segue.destination as! FoodDetailViewController
+//        if let index = foodsTableView.indexPathForSelectedRow {
+//            destination.selectedFood = foods?[index.row]
+//        }
     }
 }
