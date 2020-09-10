@@ -23,4 +23,7 @@ class FoodDetailViewController : UIViewController {
     private func loadData() {
         
     }
+    @IBAction func testButton(_ sender: UIButton) {
+        sender.removeFromSuperview()
+    }
 }
